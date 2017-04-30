@@ -12,4 +12,20 @@ defmodule PhysicsTest do
 			|> Physics.Rocketry.escape_velocity
 		assert ev == 1.0
 	end
+
+	test "Orbital acceleration for earth at 100km" do
+		orbital_acc = 100 |> Physics.Rocketry.orbital_acceleration
+		assert orbital_acc == 9.515619587729839
+    end
+
+	test "Orbital term for 6419.992608113231km above earth" do
+		term = 6419.992608113231 |> Physics.Rocketry.orbital_term |> IO.inspect
+		assert term == 4
+    end
+
+	test "Find right height for 4 hours" do
+		height = 4 |> Physics.Rocketry.orbital_height
+		assert height == 6419.992608113231
+    end
+
 end
