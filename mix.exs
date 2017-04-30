@@ -27,7 +27,7 @@ defmodule Physics.Mixfile do
   #   {:my_dep, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
   #
   # Type "mix help deps" for more examples and options
-  defp deps do
-    []
-  end
+	defp deps do
+		[{:amnesia, github: "meh/amnesia", tag: :master}]
+	end
 end

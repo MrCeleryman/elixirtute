@@ -29,4 +29,12 @@ defmodule SolarTest do
 		d = Solar.deadliest(flares)
 		assert d == 99000
 	end
+
+	test "total flare power with enum", %{data: flares} do
+		Solar.total_flare_power(flares)
+	end
+
+	test "the flare list", %{data: flares} do
+		Solar.flare_list(flares)
+	end
 end
