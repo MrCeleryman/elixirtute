@@ -1,8 +1,7 @@
 defmodule Physics.Rocketry do
-
 	import Converter
 	import Calcs
-	import Physics.Laws
+	import Physics.Laws, only: [newtons_gravitational_constant: 0]
 	import Planets
 
 	def escape_velocity(:earth), do: earth() |> escape_velocity
@@ -27,7 +26,7 @@ defmodule Physics.Rocketry do
 
 	def orbital_term(height) do
 		4 * (:math.pi |> squared) * (orbital_radius(height) |> cubed) / (
-			newtons_gravitational_constant() * earth.mass())
+			newtons_gravitational_constant() * earth().mass())
 			|> square_root
 			|> seconds_to_hours
     end

@@ -26,9 +26,12 @@ defmodule Converter do
 		end |> round_to(precision)
   	end
 
+	def round_to(val) when is_integer(val), do: round(val + 0.5)
+
+	def round_to(val, precision) when is_float(val), do: Float.round(val, precision)
+
 	defp from_miles(val), do: val * 5.36819e-6
 	defp from_meters(val), do: val * 3.335638620368e-9
 	defp from_feet(val), do: val * 1.016702651488166404e-9
 	defp from_inches(val), do: val * 8.472522095734715723e-11
-	defp round_to(val, precision), do: Float.round(val, precision)
 end
