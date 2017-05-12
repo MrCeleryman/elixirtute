@@ -20,7 +20,8 @@ defmodule TuteTweet.Mixfile do
       {:credo, "~> 0.7.4"},
       {:quantum, "~> 1.9"},
       {:extwitter, "~> 0.8.3"},
-      {:oauth, github: "tim/erlang-oauth"}
+      {:oauth, github: "tim/erlang-oauth"},
+      {:mock, "~> 0.2.1"}
     ]
   end
 end
