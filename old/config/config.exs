@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :tute_tweet, key: :value
+#     config :physics, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:tute_tweet, :key)
+#     Application.get_env(:physics, :key)
 #
 # Or configure a 3rd-party app:
 #
