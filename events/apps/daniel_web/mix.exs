@@ -21,7 +21,16 @@ defmodule DanielWeb.Mixfile do
 	# Type `mix help compile.app` for more information.
 	def application do
 	[mod: {DanielWeb, []},
-		applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :daniel_web]]
+		applications: [
+			:phoenix,
+			:phoenix_pubsub,
+			:phoenix_html,
+			:cowboy,
+			:logger,
+			:gettext,
+			:daniel_api
+		]
+	]
 	end
 
 	# Specifies which paths to compile per environment.
